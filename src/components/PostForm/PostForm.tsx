@@ -30,6 +30,7 @@ const PostForm = () => {
 				title,
 			}
 			dispatch(addPost(newPost))
+			setTitle('')
 			setPost('')
 		}
 	}
@@ -44,6 +45,7 @@ const PostForm = () => {
 					label='Title'
 					variant='outlined'
 					size='small'
+					value={title}
 					onChange={titleChange}
 					fullWidth
 				/>
