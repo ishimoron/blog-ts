@@ -1,0 +1,19 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.width {
+	width: 600px;
+}
+
+.title {
+	margin: 10px 0;
+}
+
+.mt {
+	margin-top: 10px;
+}

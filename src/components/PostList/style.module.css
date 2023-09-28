@@ -1,0 +1,40 @@
+/* PostList.module.css */
+
+.postContainer {
+	padding: 16px;
+	margin-bottom: 16px;
+	background-color: #f0f0f0;
+}
+
+.postTitle {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.postText {
+	font-size: 1rem;
+	margin-top: 8px;
+}
+
+.postDate {
+	font-size: 0.8rem;
+	color: gray;
+}
+
+.postAuthor {
+	display: block;
+	font-size: 0.8rem;
+	color: blue;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+}
