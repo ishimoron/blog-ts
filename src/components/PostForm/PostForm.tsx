@@ -21,17 +21,23 @@ const PostForm = () => {
 	}
 
 	const handlePosts = () => {
-		if (post && title) {
-			const newPost: IPosts = {
-				createdAt: new Date().toLocaleString(),
-				id: Date.now(),
-				text: post,
-				author,
-				title,
+		try {
+			if (post && title) {
+				const newPost: IPosts = {
+					createdAt: new Date().toLocaleString(),
+					id: Date.now(),
+					text: post,
+					author,
+					title,
+				}
+				dispatch(addPost(newPost))
+				setTitle('')
+				setPost('')
+			} else {
+				throw new Error('Content in fields are required')
 			}
-			dispatch(addPost(newPost))
-			setTitle('')
-			setPost('')
+		} catch (error) {
+			console.log(error)
 		}
 	}
 

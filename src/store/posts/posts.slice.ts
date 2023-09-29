@@ -14,11 +14,12 @@ export const postsSlice = createSlice({
 			return state.filter(post => post.id !== action.payload)
 		},
 		changePost: (state, action: PayloadAction<IPosts>) => {
-			const { title, text, id } = action.payload
+			const { title, text, id, createdAt } = action.payload
 			const toChange = state.find(post => post.id === id)
 			if (toChange) {
 				toChange.title = title
 				toChange.text = text
+				toChange.createdAt = createdAt
 			}
 		},
 	},
